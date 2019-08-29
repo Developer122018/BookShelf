@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+{% block content %}
+
+<h1>{{mbd.name}} - Details</h1>
+    <ul>
+    <h4><p>
+        The price is:
+        <b>{{mbd.price}}</b>
+    </p></h4>
+    <p>
+        {{mbd.author}} wrote this book on {{mbd.published_date}}
+        in {{mbd.language}}
+    </p>
+
+    <q>{{mbd.description}}</q>
+    <cite>the blurb</cite>
+    <p>
+        <a href = "/shop/books">booklist</a>
+    </p>
+    </ul>
+
+{% endblock %}
+<!-- when you click on a url -->
+
+<!-- the task is to design this page - read HTML-->

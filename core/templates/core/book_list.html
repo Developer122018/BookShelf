@@ -1,0 +1,52 @@
+{% extends 'core/base.html' %}
+{% block content %}
+
+
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">Album example</h1>
+      <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+      <p>
+        <a href="book/create" class="btn btn-primary my-2">Create New Book</a>
+        <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+      </p>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+      <div class = 'container' >
+        <div class="row">
+          {% for data in my_books %}
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow">
+               <a href="#">
+            <img class="card-img-top embed-responsive-item" src="#" alt="{{ data.book_name }}">
+              </a>
+            <div class="card-body">
+              <p class="card-text">{{data.name}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a class="btn btn-sm btn-outline-secondary" href="{% url 'detail_book' data.book_id %}">detail</a>
+                  <a class="btn btn-sm btn-outline-secondary" href="update/{{data.book_id}}">update</a>
+                  <a class="btn btn-sm btn-outline-secondary" href="delete/{{data.book_id}}">Delete</a>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+  
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}
+
+
+
+

@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+{% block content %}
+
+<form method="POST">
+    {% csrf_token %}
+    <p>
+        Are you sure you want to delete {{book_obj.name}}?
+    </p>
+    <button type = 'submit' value="submit">delete</button>
+</form>
+<a href="/shop/books">Cancel</a>
+
+{% endblock %}
+
+
+
+<!-- django girls -->

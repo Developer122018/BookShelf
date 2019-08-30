@@ -24,12 +24,11 @@ def delete_book(request,pk):
 
 #creates a new book and adds it to the database
 def create_book(request):
-    print(request)
     form = BookForm(request.POST or None)#multiple ways to write code here
     if form.is_valid():
         form.save()
         return redirect('/shop/books')
-    return render(request,'core/create_book.html',{'book_form':form})    
+    return render(request,'core/create_book_2.html',{'book_form':form})    
 
 #updates an existing book and uses forms to do so
 def update_book(request,id):

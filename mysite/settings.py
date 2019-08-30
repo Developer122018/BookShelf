@@ -38,11 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
-    'crispy_forms'
+    # 'crispy_forms' 
+    #now when we are using custom form then why use this, you don't like it either
 ]
 
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+# CRISPY_TEMPLATE_PACK = 'bootstrap4'  
+#always comment code until you're going on productuion, then we do code cleaning thus taking redundant code out.
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

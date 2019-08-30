@@ -16,7 +16,7 @@
     <link href="{% static 'core/bootstrap.min.css' %}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="album.css" rel="stylesheet">
+    <link href="{% static 'core/style.css' %}" rel="stylesheet">
   </head>
 
   <body>
@@ -57,12 +57,11 @@
     {% endblock %}
 
 
-    <footer class="text-muted">
+    <footer class="footer text-muted">
       <div class="container">
         <p class="float-right">
           <a href="#">Back to top</a>
         </p>
-        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
         <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
       </div>
     </footer>

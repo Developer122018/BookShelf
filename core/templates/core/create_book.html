@@ -26,8 +26,7 @@
             <div class="col-md-7 m-x-auto pull-xs-none">
                 <div class="jumbotron">
                     <h2 class="h2-responsive"><strong>Create A New Book</strong></h2>
-                    <p>Create New Book</p>
-                    <!-- <hr class="m-y-2"> -->
+                    <hr class="m-y-2">
 
                     <!--Naked Form-->
                     <div class="card-block">
@@ -46,7 +45,7 @@
 
                             <h5 class="h5-responsive">Author's Name</h5>
                             <div class="md-form">
-                                <i class="fa fa-user prefix"></i>
+                                <!-- <i class="fa fa-user prefix"></i> -->
                                 <input type="text" name="author" id="form2" class="form-control">
                                 <label for="form2">What is the author's name?</label>
                             </div>
@@ -54,33 +53,33 @@
                             <!--Email validation-->
                             <h5 class="h5-responsive">Language</h5>
                             <div class="md-form">
-                                <i class="fa fa-envelope prefix"></i>
-                                <input type="text" name="language" id="form9" class="form-control">
-                                <label for="form9" data-error="wrong" data-success="right">Which language is this book written in?</label>
+                                <!-- <i class="fa fa-envelope prefix"></i> -->
+                                <input type="text" name="language" id="form3" class="form-control">
+                                <label for="form3" data-error="wrong" data-success="right">Which language is this book written in?</label>
                             </div>
 
                             <!--Textarea with icon-->
                             <h5 class="h5-responsive">Date it was published</h5>
                             <div class="md-form">
-                                 <i class="fa fa-pencil prefix"></i>
-                                <input type="text" name="published_date" id="form7" class="form-control"></input>
-                                <label for="form7">Which date was it published on?</label>
+                                 <!-- <i class="fa fa-pencil prefix"></i> -->
+                                <input type="date" name="published_date" id="date-picker" class="form-control datepicker"></input>
+                                <label for="date-picker"></label>
                             </div>
 
                             <h5 class="h5-responsive">Price</h5>
                             <div class="md-form">
-                                <input type="text" name="price" id="form11" class="form-control">
-                                <label for="form11" class="disabled">How much does it cost?</label>
+                                <input type="number" name="price" id="form4" class="form-control">
+                                <label for="form4">How much does it cost?</label>
                             </div>
 
                             <h5 class="h5-responsive">Description</h5>
                             <div class="md-form">
-                                <textarea type="text" name="price" id="form11" class="md-textarea" ></textarea>
-                                <label for="form11" class="disabled">What is the description?</label>
+                                <textarea type="text" name="description" id="form5" class="md-textarea" ></textarea>
+                                <label id="form5">What is the description?</label>
                             </div>
 
                             <div class="text-xs-left">
-                                <button class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary">Submit</button>
                             </div>
                         </form>
 
@@ -94,30 +93,8 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 m-x-auto pull-xs-none">
-                <p class="text-xs-center small-text m-y-2 p-x-2">This content was not created or endorsed by Google. Report Abuse - Terms of Service - Additional Terms</p>
-            </div>
-        </div>
     </div>
 </main>
-
-<!-- Outro -->
-            <section id="outro">
-      <div class="container">
-        <div class="row text-xs-center p-t-1 p-b-4">
-          <div class="col-md-12">
-            <br>
-            <h3>Built with Material Design for Bootstrap</h3>
-            <br>
-            <p>Powerful and free Material Design UI KIT</p>
-            <p><strong>400+</strong> material UI elements, <strong>600+</strong> material icons, <strong>74</strong> CSS animations, SASS files, templates, tutorials and many more. </p>
-            <a target="_blank" href="https://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-primary btn-lg"><i class="fa fa-download left"></i> Free download</a>
-          </div>
-        </div>
-      </div>
-            </section>
-            <!-- /.Outro -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.3/js/bootstrap.min.js"></script>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js"></script>

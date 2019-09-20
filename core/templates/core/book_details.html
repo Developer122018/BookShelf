@@ -1,25 +1,61 @@
 {% extends 'core/base.html' %}
 {% block content %}
 
-<h1>{{mbd.name}} - Details</h1>
-    <ul>
-    <h4><p>
-        The price is:
-        <b>{{mbd.price}}</b>
-    </p></h4>
-    <p>
-        {{mbd.author}} wrote this book on {{mbd.published_date}}
-        in {{mbd.language}}
-    </p>
+{% load static %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'core/css/book_detail.css' %}">
 
-    <q>{{mbd.description}}</q>
-    <cite>the blurb</cite>
-    <p>
-        <a href = "/shop/books">booklist</a>
-    </p>
-    </ul>
-
+<div class="container">
+        <div class="image-viewer">
+          <div class="main-image">
+            <img src="{% if mbd.image %}{{ mbd.image.url }} {% endif %}"/>
+          </div>
+          <div class="secondary-images">
+            <div class="secondary-image">
+              <img src="{% if mbd.image %}{{ mbd.image.url }} {% endif %}"/>
+            </div>
+            <div class="secondary-image">
+              <img src="http://placehold.it/200x1000/42c8f4/black/"/>
+            </div>
+            <div class="secondary-image">
+              <img src="http://placehold.it/300x600/bf42f4/black/"/>
+            </div>
+            <div class="secondary-image">
+              <img src="http://placehold.it/3200x1800/f4425c/black/"/>
+            </div>
+          </div>
+        </div>
+        <div class="detail">
+          <h1 class="detail-name">{{mbd.name}}</h1>
+          <p class="detail-short-description"> 
+            <p>Author - {{mbd.author}}</p> 
+            <p> Published on - {{mbd.published_date}}</p>
+            <p>Availabe in {{mbd.language}}</p>
+          </p>
+          <div class="detail-long-description"> 
+          <p>{{mbd.description}}</p>  
+          </div>
+        </div>
+        <div class="pricing">
+          <div class="pricing-price">{{mbd.price}}</div>
+          <button class="btn pricing-btn">Add to Cart</button>
+        </div>
+        <div class="lightbox" id="lightbox">
+          <img src="http://placehold.it/650x650"/>
+          <div class="lightbox-controls">
+            <div class="lightbox-controls-close">
+              <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+            <div class="lightbox-controls-previous">
+              <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </div>
+            <div class="lightbox-controls-next">
+              <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        
+      </div> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      <script src="{%  static 'core/js/book_detail.js' %}"></script>
 {% endblock %}
-<!-- when you click on a url -->
-
-<!-- the task is to design this page - read HTML-->

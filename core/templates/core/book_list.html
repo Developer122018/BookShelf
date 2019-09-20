@@ -22,7 +22,7 @@
         <div class="col-md-4">
           <div class="card mb-4 box-shadow">
                <a href="#">
-            <img class="card-img-top embed-responsive-item" src="#" alt="{{ data.book_name }}">
+            <img class="card-img-top embed-responsive-item" src="{% if data.image %}{{ data.image.url }} {% endif %}" alt="{{ data.name }}">
               </a>
             <div class="card-body">
               <p class="card-text">{{data.name}}</p>
